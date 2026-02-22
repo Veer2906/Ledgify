@@ -87,7 +87,7 @@ Ledgify is not a generic chatbot wrapper around an API. It's a **full-featured f
 
 The entire workflow — from identifying overdue invoices to sending reminders to reconciling payments to analyzing trends — happens in one conversation.
 
-### 3. Widget-Model Interaction (20pt)
+### 3. Widget-Model Interaction 
 
 *How well does the project leverage two-way communication between widgets and the model?*
 
@@ -98,7 +98,7 @@ Ledgify makes heavy use of bidirectional widget-model communication:
 - **Widget-to-widget chaining**: Clicking "Remind" in the invoice list widget triggers `send-followup-email`, which returns a completely different widget (email preview). Clicking "Remind" in the insights dashboard does the same. This creates multi-step workflows that flow naturally through the conversation.
 - **State management**: Widgets manage local state for tab switching (insights dashboard has Summary/Insights/Charts/At Risk tabs), format toggling (export widget switches between CSV/Excel), email editing (email preview has editable subject and body fields), and download tracking.
 
-### 4. User Experience & UI (10pt)
+### 4. User Experience & UI 
 
 *How polished and intuitive is the experience?*
 
@@ -110,7 +110,7 @@ Ledgify makes heavy use of bidirectional widget-model communication:
 - **One-click actions**: "Remind", "Send", "Download", "Switch format" — every action is a single click with clear visual feedback (button state changes, success confirmations).
 - **Null safety**: All widgets handle missing or partial data gracefully with fallback UIs instead of crashing.
 
-### 5. Production Readiness (10pt)
+### 5. Production Readiness 
 
 *OAuth, onboarding, and configuration needed when a user first installs the MCP App.*
 
