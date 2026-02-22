@@ -164,7 +164,7 @@ Or connect your GitHub repo at [manufact.com](https://manufact.com) for auto-dep
 
 ## Team
 
-Built by **Veer Mehta** at the MCP Apps Hackathon 2026 @ Y Combinator, San Francisco.
+Built by **Veer Mehta** & **Pratham Rangwala** at the MCP Apps Hackathon 2026 @ Y Combinator, San Francisco.
 
 ---
 
