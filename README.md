@@ -12,7 +12,6 @@ Small businesses lose an average of **$50,000+ per year** to late payments. Mana
 
 - Tracking overdue invoices requires logging into accounting software, filtering, and cross-referencing dates
 - Sending payment reminders is tedious — writing emails, choosing the right tone, following up repeatedly
-- Reconciling payments against invoices is error-prone when names don't match exactly (e.g., "Acme Corp" vs "Acme Corporation")
 - Cash flow visibility requires pulling reports from multiple systems and manual calculations
 - No easy way to export formatted reports for stakeholders or audits
 
