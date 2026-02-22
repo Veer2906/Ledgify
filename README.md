@@ -87,40 +87,6 @@ Ledgify is not a generic chatbot wrapper around an API. It's a **full-featured f
 
 The entire workflow — from identifying overdue invoices to sending reminders to reconciling payments to analyzing trends — happens in one conversation.
 
-### 3. Widget-Model Interaction 
-
-*How well does the project leverage two-way communication between widgets and the model?*
-
-Ledgify makes heavy use of bidirectional widget-model communication:
-
-- **`useCallTool()`**: Every widget uses `useCallTool` to trigger actions. The invoice list widget calls `send-followup-email` when the user clicks "Remind". The email preview widget calls `confirm-send-email` when the user clicks "Send". The export widget calls `export-data` with a different format when the user clicks "Switch to Excel/CSV". The insights dashboard calls `check-overdue-invoices` and `financial-analysis` via quick action buttons.
-- **`useWidget()` + props**: All 7 widgets consume structured props from the server and render rich, interactive UIs. The financial charts widget receives period data arrays and renders them as bar/line charts. The reconciliation dashboard receives matched/unmatched arrays and renders them as categorized tables with action buttons.
-- **Widget-to-widget chaining**: Clicking "Remind" in the invoice list widget triggers `send-followup-email`, which returns a completely different widget (email preview). Clicking "Remind" in the insights dashboard does the same. This creates multi-step workflows that flow naturally through the conversation.
-- **State management**: Widgets manage local state for tab switching (insights dashboard has Summary/Insights/Charts/At Risk tabs), format toggling (export widget switches between CSV/Excel), email editing (email preview has editable subject and body fields), and download tracking.
-
-### 4. User Experience & UI 
-
-*How polished and intuitive is the experience?*
-
-- **Consistent design system**: All 7 widgets use a cohesive design language with rounded corners, gradient headers, consistent color coding, and dark mode support via Tailwind CSS.
-- **Color-coded urgency**: Invoices are visually tagged with urgency badges — green (<30 days), yellow (30-60 days), red (60+ days) — so users can prioritize at a glance.
-- **Loading states**: Every widget shows a skeleton loader with animated pulse effects while data loads, providing instant visual feedback.
-- **Responsive tables**: Data tables with horizontal scroll, alternating row stripes, and formatted values (currency, percentages, dates).
-- **Interactive charts**: Financial analysis and insights dashboards include bar charts and line charts with grid lines, axis labels, and tooltips.
-- **One-click actions**: "Remind", "Send", "Download", "Switch format" — every action is a single click with clear visual feedback (button state changes, success confirmations).
-- **Null safety**: All widgets handle missing or partial data gracefully with fallback UIs instead of crashing.
-
-### 5. Production Readiness 
-
-*OAuth, onboarding, and configuration needed when a user first installs the MCP App.*
-
-- **Demo mode**: Works out of the box with realistic mock data — no API keys or configuration required for immediate testing. The demo data includes 8 overdue invoices, 10 bank transactions, 12 months of financial data, and monthly summaries.
-- **Connection-based architecture**: The `connectionId` parameter on every tool enables multi-tenant support. When real accounting integrations are connected (via Unified API), the same tools work with live data by simply passing the real connection ID.
-- **FastAPI backend**: Production-grade Python backend with CORS configuration, health checks, structured error handling, and admin endpoints for managing demo data.
-- **Admin panel**: Built-in admin UI at `/admin` for viewing and editing demo data (invoices, transactions, monthly summaries, financial periods) without touching code.
-- **Environment-based configuration**: `PYTHON_API`, `MCP_URL`, `OPENAI_API_KEY`, and `UNIFIED_API_KEY` are all configurable via environment variables.
-- **Manufact Cloud deployment**: One-command deployment via `npm run deploy` or GitHub integration at manufact.com.
-
 ---
 
 ## Architecture
