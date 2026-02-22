@@ -60,11 +60,7 @@ Export any data type (invoices, transactions, financial analysis, monthly summar
 
 ---
 
-## Hackathon Evaluation Criteria
-
-### 1. Originality (30pt)
-
-*"I didn't know you could build that as an MCP App."*
+## :)
 
 Ledgify is not a generic chatbot wrapper around an API. It's a **full-featured financial operations platform** built entirely as an MCP App:
 
@@ -74,9 +70,8 @@ Ledgify is not a generic chatbot wrapper around an API. It's a **full-featured f
 - **AI-powered insights aggregation**: The insights tool doesn't just display data — it cross-references overdue invoices, cash flow trends, and reconciliation status to generate actionable business recommendations with severity levels.
 - **File export from a chat interface**: Users can export any data slice as a professionally formatted Excel file (with styled headers, alternating row colors, and currency formatting) or CSV — directly downloadable from the widget.
 
-### 2. Real-World Usefulness (30pt)
+### 2. Real-World Usefulness 
 
-*Does the app solve a real problem or meaningfully improve a workflow?*
 
 **Yes — AR/AP management is a $10B+ market pain point for SMBs.**
 
