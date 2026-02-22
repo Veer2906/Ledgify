@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.pyo
+.pyd
+venv/
+.venv/
+env/
+.env/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+python-backend/.env
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+
+# MCP deployment
+.mcp-use/
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# TypeScript
+*.tsbuildinfo
+
+# Admin demo data overrides
+python-backend/demo_overrides.json
+
+# Misc
+.cache/
+tmp/
+temp/
